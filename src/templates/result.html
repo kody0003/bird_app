@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Upload Test App</title>
+  </head>
+  <body>
+    {% if image %}
+    <h1> {{ message }} </h1>
+    <div>
+        <img src="{{ image }}">
+    </div>
+    <a href="./">トップへ戻る</a>
+{% else %}
+    <a href="./">トップへ戻る</a>
+{% endif %}
+  </body>
+</html>
+
