@@ -2,13 +2,13 @@
 <html lang="ja" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Upload Test App</title>
+    <title>Animal Predict App</title>
   </head>
   <body>
-    {% if image %}
-    <h1> {{ message }} </h1>
+    {% if animalName %}
+    <h1>これは {{ animalName }} です</h1>
     <div>
-        <img src="{{ image }}">
+      <img src="{{ image }}">
     </div>
     <a href="./">トップへ戻る</a>
 {% else %}
