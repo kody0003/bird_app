@@ -56,15 +56,30 @@ def allwed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 # URL にアクセスがあった場合の挙動の設定
-@app.route('/', methods = ['GET', 'POST'])
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/birds')
+def birds():
+    return render_template('birds.html')
+
+@app.route('/upload')
+def upload():
+    return render_template('upload.html')
+
+@app.route('/predicts', methods = ['GET', 'POST'])
 def predicts():
-    # リクエストがポストかどうかの判別
     if request.method == 'POST':
         # ファイルがなかった場合の処理
-        if 'filename' not in request.files:
+        if 'uploadfile' not in request.files:
             return redirect(request.url)
         # データの取り出し
-        file = request.files['filename']
+        file = request.files['uploadfile']
         # ファイルのチェック
         if file and allwed_file(file.filename):
 
@@ -82,24 +97,11 @@ def predicts():
             # 入力された画像に対して推論
             pred = predict(image)
             animalName_ = getName(pred)
-            return render_template('result.html', animalName=animalName_, image=base64_data)
+            return render_template('upload.html', animalName=animalName_, image=base64_data)
 
-    # GET メソッドの定義
+   # GET メソッドの定義
     elif request.method == 'GET':
-        return render_template('index.html')
-
-@app.route('/about')
-def about():
-    return render_template('about.html') #追加
-
-@app.route('/birds')
-def birds():
-    return render_template('birds.html') #追加
-
-@app.route('/upload')
-def upload():
-    return render_template('contact.html') #追加
-
+        return render_template('upload.html')
 
 # アプリケーションの実行の定義
 if __name__ == '__main__':

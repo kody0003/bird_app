@@ -871,6 +871,7 @@ ul.email li img {
      margin-top: 10px !important;
      font-weight: 500;
      float: right;
+     cursor: pointer;
 }
 
 .main_form .send_btn:hover {

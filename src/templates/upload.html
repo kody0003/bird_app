@@ -69,7 +69,7 @@
             <div class="row">
                <div class="col-md-12 no_ld">
                   <div class="titlepage text_align_right">
-                     <h2>Contact Us</h2>
+                     <h2>Upload</h2>
                   </div>
                </div>
                <div class="col-md-5 ">
@@ -78,7 +78,7 @@
                   </div>
                </div>
                <div class=" col-md-6 offset-md-1">
-                  <form id="request" class="main_form" method = "post" enctype = "multipart/form-data" >
+                  <form action="/predicts" id="request" class="main_form" method = "post" enctype = "multipart/form-data" >
                      <div class="row">
                         <div class="col-md-12 no_mo">
                            <div class="titlepage text_align_right">
@@ -93,10 +93,18 @@
                         </div>
 
                         <div class="col-md-12">
-                           <input class="send_btn" type = "submit" value = "判定">
+                           <input class="send_btn" type = "submit" value = "推測" role="button">
                         </div>
                      </div>
                   </form>
+               {% if animalName %}
+                  <hr>
+                  <div class="titlepage text_align_right">
+                     <p><h2>推測結果</h2></p>
+                     <p><h3>この画像は {{ animalName }} です</h3></p>
+                     <img src="{{ image }}">
+                  </div>
+               {% endif %}
                </div>
             </div>
          </div>
