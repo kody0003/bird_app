@@ -1,0 +1,142 @@
+/*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
+
+@media (min-width: 1200px) and (max-width: 1320px) {
+    #myCarousel a.carousel-control-prev {
+        right: 11%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    #myCarousel a.carousel-control-prev {
+        right: 11%;
+    }
+    .reader li {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    ul.email {
+        padding-top: 4px;
+    }
+    .banner_main .bluid h1 {
+        font-size: 75px;
+        line-height: 90px;
+    }
+    #myCarousel a.carousel-control-prev {
+        right: 18%;
+    }
+    .titlepage h2 {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    header {
+        padding: 29px 3px;
+    }
+    .logo {
+        text-align: center;
+        display: block;
+        width: 181px;
+    }
+    #myCarousel a.carousel-control-prev {
+        right: 14%;
+    }
+    .bluid {
+        max-width: inherit;
+    }
+    .banner_main .bluid h1 {
+        color: #0e90ed;
+        font-size: 84px;
+        line-height: 109px;
+    }
+    .padding_01 {
+        padding: 15px;
+    }
+    #bird1 a.carousel-control-next {
+        right: 0%;
+    }
+    #bird2 a.carousel-control-next {
+        right: 0%;
+    }
+    #bird3 a.carousel-control-next {
+        right: 0%;
+    }
+    #bird4 .carousel-control-prev {
+        left: 0%;
+    }
+    .main_form {
+        margin-top: 30px;
+    }
+    .no_mo {
+        display: none;
+    }
+    .no_ld {
+        display: inherit;
+    }
+}
+
+@media (max-width: 575px) {
+    header {
+        padding: 33px 10px;
+    }
+    .d_none {
+        display: none !important;
+    }
+    .email {
+        padding-top: 0 !important;
+        margin-top: -42px;
+    }
+    .logo {
+        display: block;
+        width: 144px;
+        float: left;
+    }
+    #myCarousel a.carousel-control-prev {
+        right: 25%;
+    }
+    .bluid {
+        max-width: inherit;
+    }
+    .banner_main .bluid h1 {
+        font-size: 61px;
+        line-height: 84px;
+    }
+    .padding_01 {
+        padding: 15px;
+    }
+    #bird1 a.carousel-control-next {
+        right: 0%;
+    }
+    #bird2 a.carousel-control-next {
+        right: 0%;
+    }
+    #bird3 a.carousel-control-next {
+        right: 0%;
+    }
+    #bird4 .carousel-control-prev {
+        left: 0%;
+    }
+    .titlepage h2 {
+        font-size: 33px;
+    }
+    .testomoniam_text {
+        padding: 0px 20px 40px 20px;
+    }
+    .newslatter_form {
+        display: inherit;
+    }
+    .news {
+        margin-bottom: 30px;
+    }
+    .main_form {
+        margin-top: 30px;
+    }
+    .no_mo {
+        display: none;
+    }
+    .no_ld {
+        display: inherit;
+    }
+}
