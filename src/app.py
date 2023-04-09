@@ -11,8 +11,8 @@ def predict(img):
     # ネットワークの準備
     net = Net().cpu().eval()
     # # 学習済みモデルの重み（bird.pt）を読み込み
-    net.load_state_dict(torch.load('./bird.pt', map_location=torch.device('cpu')))
-#    net.load_state_dict(torch.load('./src/bird.pt', map_location=torch.device('cpu')))
+    net.load_state_dict(torch.load('./bird.pt', map_location=torch.device('cpu'))) デプロイ時
+#    net.load_state_dict(torch.load('./src/bird.pt', map_location=torch.device('cpu'))) # ローカル時
     #　データの前処理
     img = transform(img)
     img =img.unsqueeze(0) # 1次元増やす
@@ -87,6 +87,18 @@ def predicts():
     # GET メソッドの定義
     elif request.method == 'GET':
         return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html') #追加
+
+@app.route('/birds')
+def birds():
+    return render_template('birds.html') #追加
+
+@app.route('/upload')
+def upload():
+    return render_template('contact.html') #追加
 
 
 # アプリケーションの実行の定義
